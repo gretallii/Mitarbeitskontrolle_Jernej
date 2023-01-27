@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public float geschwindigkeit = 0.01f;
+
     // Start is called before the first frame update
     void Start()
     {
+        
         
     }
 
@@ -15,22 +18,22 @@ public class Player : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.W))
         {
-            transform.position += new Vector3(0, 0, 0.01f);
+            transform.position += new Vector3(0, 0, geschwindigkeit);
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            transform.position += new Vector3(-0.01f, 0, 0);
+            transform.position += new Vector3(-geschwindigkeit, 0, 0);
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            transform.position += new Vector3(0, 0, -0.01f);
+            transform.position += new Vector3(0, 0, -geschwindigkeit);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            transform.position += new Vector3(0.01f, 0, 0);
+            transform.position += new Vector3(geschwindigkeit, 0, 0);
         }
 
     }
